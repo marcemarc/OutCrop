@@ -1,0 +1,13 @@
+﻿<div class="umb-editor" ng-class="" ng-controller="Our.Umbraco.OutCropController as vm">
+   
+   
+    <a ng-show="vm.status.showButton" class="btn btn-info edit-crops" ng-click="vm.editCrops()">Edit Crops</a> <span ng-show="vm.status.statusMessage.length > 0" class="alert alert-warning">{{vm.status.statusMessage}}</span>
+
+       <umb-overlay ng-if="vm.overlay.show"
+                 model="vm.overlay"
+                 view="vm.overlay.view"
+                 title="vm.overlay.title"
+                 position="right" class="super-wide">
+    </umb-overlay>
+
+</div>

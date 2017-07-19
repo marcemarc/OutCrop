@@ -1,0 +1,36 @@
+﻿{
+    propertyEditors: [
+     {
+        alias: "Our.Umbraco.OutCrop",
+        name: "OutCrop",
+        editor: {	                                        
+        view: "~/App_Plugins/Our.Umbraco.OutCrop/contentcrop.html",
+        hideLabel:true,
+		},
+		prevalues: {
+    fields: [
+        {
+            label: "Media Picker Property Alias",
+            description: "The alias of the Single Media Picker that you want to be able to edit crops for the picked item for",
+            key: "pickerAlias",
+            view: "textstring"
+        },
+        {
+            label: "File Property Alias",
+            description: "eg. umbracoFile (defaults to this if this is empty)",
+            key: "filePropertyAlias",
+            view: "textstring"
+        }, {
+                    label: "Hide Label",
+                    description: 'Hides the property label &amp; description when selected',
+                    key: "hideLabel",
+                    view: "boolean"
+                }
+    ]
+}
+    }],
+   javascript: [
+   '~/App_Plugins/Our.Umbraco.OutCrop/contentcrop.controller.js',
+   ],
+    css: ['~/App_Plugins/Our.Umbraco.OutCrop/contentcrop.css']
+}
